@@ -22,9 +22,10 @@ const defaultSettings = () => ({
   suppressScrollX: false,
   suppressScrollY: false,
   swipeEasing: true,
+  easingMultiplier: 0.8,
   useBothWheelAxes: false,
   wheelPropagation: true,
-  wheelSpeed: 1,
+  wheelSpeed: 1
 });
 
 const handlers = {

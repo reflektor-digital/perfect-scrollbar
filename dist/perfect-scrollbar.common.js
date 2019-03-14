@@ -1,6 +1,6 @@
 /*!
- * perfect-scrollbar v1.4.0
- * (c) 2018 Hyunje Jun
+ * perfect-scrollbar v1.4.1
+ * (c) 2019 Hyunje Jun
  * @license MIT
  */
 'use strict';
@@ -1065,8 +1065,8 @@ var touch = function(i) {
 
         applyTouchMove(speed.x * 30, speed.y * 30);
 
-        speed.x *= 0.8;
-        speed.y *= 0.8;
+        speed.x *= i.settings.easingMultiplier;
+        speed.y *= i.settings.easingMultiplier;
       }, 10);
     }
   }
@@ -1098,9 +1098,10 @@ var defaultSettings = function () { return ({
   suppressScrollX: false,
   suppressScrollY: false,
   swipeEasing: true,
+  easingMultiplier: 0.8,
   useBothWheelAxes: false,
   wheelPropagation: true,
-  wheelSpeed: 1,
+  wheelSpeed: 1
 }); };
 
 var handlers = {
